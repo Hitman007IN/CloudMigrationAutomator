@@ -1,0 +1,32 @@
+jobs:
+- sparkJob:
+	args:
+	- gs://big_data_job_demo/input
+    - gs://big_data_job_demo/output/csv_files1
+    jarFileUris:
+    - gs://big_data_job_demo/jars/sparkConversion-0.0.1-SNAPSHOT.jar
+    mainClass: com.myApplication.driver.CsvConversionDriver
+  stepId: parquet-to-avro-step1
+- sparkJob:
+	args:
+	- gs://big_data_job_demo/input
+    - gs://big_data_job_demo/output/csv_files2
+    jarFileUris:
+    - gs://big_data_job_demo/jars/sparkConversion-0.0.1-SNAPSHOT.jar
+    mainClass: com.myApplication.driver.CsvConversionDriver
+  stepId: parquet-to-csv-step2
+placement:
+  managedCluster:
+    clusterName: spark-conversion-cluster
+    config:
+      gceClusterConfig:
+        zoneUri: us-east1-b
+      masterConfig:
+        diskConfig:
+          bootDiskSizeGb: 500
+        machineTypeUri: n1-standard-4
+      workerConfig:
+        diskConfig:
+          bootDiskSizeGb: 500
+        machineTypeUri: n1-standard-4
+        numInstances: 2
