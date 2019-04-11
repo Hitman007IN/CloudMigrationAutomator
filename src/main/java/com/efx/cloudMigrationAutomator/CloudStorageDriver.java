@@ -30,11 +30,11 @@ public class CloudStorageDriver {
 	
 	public static void main(String[] args) throws IOException {
 		// Instantiates a client
-		FileInputStream fis = new FileInputStream("src/main/resources/My Project-dc7992684edf.json");
+		FileInputStream fis = new FileInputStream("src/main/resources/MyInspiration-0bda13f15997.json");
 
 		Storage storage = StorageOptions.newBuilder()
 				.setCredentials(ServiceAccountCredentials.fromStream(fis))
-				.setProjectId("divine-ceremony-225408")
+				.setProjectId("myinspiration")
 				.build()
 				.getService();
 
@@ -42,6 +42,7 @@ public class CloudStorageDriver {
 		String inputFiles = args[1];
 		String jars = args[2];
 		String templates = args[3];
+		String propertyPath = args[4];
 
 		Boolean isBucketCreated = createStorageBucketInCloud(storage, bucketName);
 		
@@ -50,6 +51,7 @@ public class CloudStorageDriver {
 		filesInDirectory.put("output/", null);
 		filesInDirectory.put("jars/", jars);
 		filesInDirectory.put("template/", templates);
+		filesInDirectory.put("property/", propertyPath);
 		
 		if(isBucketCreated) {
 			
