@@ -49,3 +49,6 @@ Stack Driver Dashboard
 
 Alert Policy
 ![alt text](https://github.com/Hitman007IN/CloudMigrationAutomator/blob/master/image/alertPolicy.png)
+
+Email Notification from StackDriver
+![alt text](https://github.com/Hitman007IN/CloudMigrationAutomator/blob/master/image/emailNotification.png)
