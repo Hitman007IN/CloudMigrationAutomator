@@ -7,7 +7,7 @@ jobs:
       - ','
       - csv
     jarFileUris:
-      - gs://cloud_migration_demo/jars/Conversion-0.0.1-SNAPSHOT.jar
+      - gs://cloud_migration_demo/jars/Conversion.jar
     mainClass: com.dataset.Conversion.ParquetConversionDriver
   stepId: csv-to-parquet-step1
 - sparkJob:
@@ -18,7 +18,7 @@ jobs:
       - ','
       - txt
     jarFileUris:
-      - gs://cloud_migration_demo/jars/Conversion-0.0.1-SNAPSHOT.jar
+      - gs://cloud_migration_demo/jars/Conversion.jar
     mainClass: com.dataset.Conversion.ParquetConversionDriver
   stepId: txt-to-parquet-step2
 - sparkJob:
@@ -26,8 +26,11 @@ jobs:
       - gs://cloud_migration_demo/output/addressParquet
       - gs://cloud_migration_demo/output/preprocessedAddress
     jarFileUris:
-      - gs://cloud_migration_demo/jars/PreProcessing-0.0.1-SNAPSHOT.jar
+      - gs://cloud_migration_demo/jars/PreProcessing.jar
     mainClass: com.dataset.PreProcessing.DatasetPreProcessingDriver
+  prerequisiteStepIds:
+  - csv-to-parquet-step1
+  - txt-to-parquet-step2
   stepId: preprocess-address-step3
 - sparkJob:
     args:
@@ -36,16 +39,20 @@ jobs:
       - gs://cloud_migration_demo/output/master
       - merge
     jarFileUris:
-      - gs://cloud_migration_demo/jars/Merging-0.0.1-SNAPSHOT.jar
+      - gs://cloud_migration_demo/jars/Merging.jar
     mainClass: com.dataset.Merging.DatasetLinkingDriver
+  prerequisiteStepIds:
+  - preprocess-address-step3
   stepId: linking-data-step4
 - sparkJob:
     args:
       - gs://cloud_migration_demo/input/score.csv
       - gs://cloud_migration_demo/output/score
     jarFileUris:
-      - gs://cloud_migration_demo/jars/Model-0.0.1-SNAPSHOT.jar
+      - gs://cloud_migration_demo/jars/Model.jar
     mainClass: com.dataset.Model.ScoreDriver
+  prerequisiteStepIds:
+  - linking-data-step4
   stepId: generate-score-step5
 - sparkJob:
     args:
@@ -54,9 +61,24 @@ jobs:
       - gs://cloud_migration_demo/output/final
       - score
     jarFileUris:
-      - gs://cloud_migration_demo/jars/Merging-0.0.1-SNAPSHOT.jar
+      - gs://cloud_migration_demo/jars/Merging.jar
     mainClass: com.dataset.Merging.DatasetLinkingDriver
+  prerequisiteStepIds:
+  - generate-score-step5
   stepId: merging-master-score-step6
+- sparkJob:
+    args:
+      - userAddress
+      - gs://cloud_migration_demo/output/final
+      - gs://cloud_migration_demo/output/finalReportToCsv
+      - ','
+      - parquet
+    jarFileUris:
+      - gs://cloud_migration_demo/jars/Conversion.jar
+    mainClass: com.dataset.Conversion.ParquetConversionDriver
+  prerequisiteStepIds:
+  - merging-master-score-step6
+  stepId: convert-final-csv-step7
 placement:
   managedCluster:
     clusterName: spark-conversion-cluster

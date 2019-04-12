@@ -4,8 +4,8 @@ gcloud dataproc workflow-templates create cloud-migration-demo-template
 
 gcloud dataproc workflow-templates import cloud-migration-demo-template --source cloud-migration-demo.yaml
 
-gcloud dataproc workflow-templates export cloud-migration-demo-template --destination cloud-migration-demo.yaml
-
 gcloud dataproc workflow-templates instantiate-from-file --file cloud-migration-demo.yaml
 
 gcloud dataproc workflow-templates delete cloud-migration-demo-template
+
+gcloud dataproc workflow-templates export cloud-migration-demo-template --destination cloud-migration-demo.yaml
