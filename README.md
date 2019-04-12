@@ -33,3 +33,19 @@ The project is split into mutiple modules:-
 	gcloud dataproc workflow-templates instantiate-from-file --file cloud-migration-demo.yaml
 
 	gcloud dataproc workflow-templates delete cloud-migration-demo-template
+
+# Snapshots
+Cloud Storage Bucket
+![alt text](https://github.com/Hitman007IN/CloudMigrationAutomator/blob/master/image/cloudStorageBucket.png)
+
+Cloud Dataflow Template running in Cloud Shell
+![alt text](https://github.com/Hitman007IN/CloudMigrationAutomator/blob/master/image/runningTemplateInShell.png)
+
+Stack Driver Dashboard
+![alt text](https://github.com/Hitman007IN/CloudMigrationAutomator/blob/master/image/StackDriverDashboard1.png)
+
+Stack Driver Dashboard
+![alt text](https://github.com/Hitman007IN/CloudMigrationAutomator/blob/master/image/StackDriverDashboard2.png)
+
+Alert Policy
+![alt text](https://github.com/Hitman007IN/CloudMigrationAutomator/blob/master/image/alertPolicy.png)
