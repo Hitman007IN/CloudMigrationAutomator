@@ -1,0 +1,5 @@
+{
+  "name": "sample-cloud-storage",
+  "version": "0.0.1",
+  "dependencies":{ "googleapis": "^21.3.0" }
+}
