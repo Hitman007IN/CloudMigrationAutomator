@@ -81,7 +81,7 @@ jobs:
   stepId: convert-final-csv-step7
 placement:
   managedCluster:
-    clusterName: spark-conversion-cluster
+    clusterName: cloud-migration-demo-cluster
     config:
       gceClusterConfig:
         zoneUri: us-east1-b
