@@ -7,7 +7,7 @@
 
 const dataproc = require('@google-cloud/dataproc');
 
-exports.helloWorld = (req, res) => {
+exports.triggerTemplate = (req, res) => {
 
 
 const client = new dataproc.v1.WorkflowTemplateServiceClient({
