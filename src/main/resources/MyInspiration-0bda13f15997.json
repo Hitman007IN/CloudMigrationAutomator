@@ -1,12 +1,12 @@
 {
   "type": "service_account",
-  "project_id": "myinspiration",
-  "private_key_id": "0bda13f15997b08896fbf17752aaf74c329aecaf",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC/Yq5NeCpjGSc1\ncGVZ7tRR9J+OJ4wwHMrKCSknX32EJngkPpMu67hKMMait6L5jllAssj7s2mMdKDW\n4uMARZJgVjJ2FyiPUPc59ok6aIxDAwVvgIQ5jX6cvNyXWyZ9JqfcEDu/yEVcJBnW\nNDpTuM5O8mG49RPUn4Jndw/StzXEalKEH1xVQr21MzcyhvHH9d4Mw/Wnvj0T26F7\nVIhlIjrT8rEdZ6s8gaS9uIty7sBYCGNWhLXWbHxhFa4B4D8Y/T+24Zq+poS5t3SJ\n9PrOA3Rt8WY8Q8o0J8ZP6AqkrX3uf7QnTdga+U6FSs+dskgS7gIfMNOh2vbaLBk0\nAp28c9d5AgMBAAECggEACzQfKQjSTmfQDEhOnpOlGUEdQAifo8djta0QnC3yXpST\n7uc83X/OE4XEcw0V/M7w+aEds+JeWOsQ6VNx33ezKHGTVadoZ+9g8aM1iFZLc7bP\nECZxVx8p3MoPjcq3t5bWN8M5hDIYoVq5qnj3OyRz61o0D0xFg2ptC1qEchzoiF1p\nGOYZzG/lIL+b/nJZa1z345ifiwFFv/7WtSy43cJ+3trHTwuuQVSaV17j3AOKnGJl\nqfQAYsFt2RMWjfs2lSXMDZfPGygHl07nQlAr+XCzlhsoXO2hUJSsChhYz6hp2uU9\nhc29txM/JHtzEJtOl3QeyClBgCgpf4psTk/VscZ6awKBgQDhF7aAEvYLamA3e4vB\nU/6+bZ9cTa3AlHJ01I/OTiJRHtfNUIKTJTEKrq4We+da9wc6LiPBx5sgTmbjw7DF\nttnC3ObDPR5ZVTslfxSBDeSA3Jgdwxp1mmFriDF3vFzgVyR2dkktq0O9VOnLaePl\nEXLjHsYci9L6XzSlqEx8XyN/FwKBgQDZqh6L0QRK9IedMBogW4Rm8vOtsfTxuFLO\noasiWk21XqZOV7BTccX/UclIOwfjXYi/cCISzVZOqRc+RwJLnhnuqZyTcj4EzS5u\n7Hyy5SSWj/94T6hL8gXWeZ3B6qsygaFX+qrzDFI6j7n2BN844iNkYSLFq/2Idgi1\n7IYNgXf37wKBgF+0bmNMLJMz+o78l7JunTyobX6YhI0CURv9mNtV+19UZtskJTCd\nOpnZJannqrnRmKATKB7nWLzGuRaUiN+33CTvOaq/nNzM0WYi/zvUBVkI8iCNaP2h\n01QeRzIqw66bPqSjrH+fdyDULsfPURd/cMLCvec7SEwuGLtqsIKdDQGnAoGAHlfI\nylTo9EoCXbdG7RvU6UUVEzGro8a+RG/lG3TbQF1hcapnujoyD9Wm6ZrRDrELTySi\nm1xkm7KWuufLOh9gHhUm7qcOXjz8LBprh8TJxPNt+aehHnUuuydZBp9gHjpT85/O\nFPOywtcmZVVoiNV9eZDQ+B1xyoQp0rKWPWu+/aECgYEAnHl5M3yIuZIe9rMT1p6p\naiyxR260XN2MGfj1e3IXjDVU6VTjQGVjCjH5+g+b26WIznrIOaGIq92Kd6OUa5Gh\n57LcwgQFjsmFxg5/NajgRBlhY1ZUk5g1z+OSQxi8GJPztwSgv6IHZOHCC2D2/iRg\nGUndtd8QdSJ0zFlb9zBPe4Q=\n-----END PRIVATE KEY-----\n",
-  "client_email": "project-owner@myinspiration.iam.gserviceaccount.com",
-  "client_id": "106375153271635077139",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/project-owner%40myinspiration.iam.gserviceaccount.com"
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": ""
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "",
+  "token_uri": "",
+  "auth_provider_x509_cert_url": "",
+  "client_x509_cert_url": ""
 }
